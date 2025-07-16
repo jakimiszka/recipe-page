@@ -1,3 +1,6 @@
+@import url('https://fonts.google.com/specimen/Young+Serif:wght@400&display=swap');
+@import url('https://fonts.google.com/specimen/Outfit:wght@400;700&display=swap');
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +13,187 @@ html, body {
 }
 
 :root{
-    --primary-color: hsl(228, 45%, 44%);
-    --secondary-color: hsl(228, 45%, 44%);
-    --text-color: hsl(228, 45%, 44%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+    --fs-young: 'Young Serif', serif;
+    --fs-outfit: 'Outfit', sans-serif;
+}
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: var(--stone-100);
+}
+
+.recipe-card {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    height: auto;
+    width: 40%;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-wrapper{
+    width: 100%;
+    height: auto;
+    padding: .8rem;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+.recipe-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1rem;
+    color: var(--stone-900);
+    margin-top: 2rem;
+    font-family: var(--fs-young);
+}
+
+.description {
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--stone-600);
+    text-align: left;
+    margin-top: 1.2rem;
+    line-height: 30px;
+    text-align: justify;
+    font-family: var(--fs-outfit);
+}
+
+.section-title{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--brown);
+    font-family: var(--fs-young);
+}
+
+.prep{
+    height: auto;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--rose-50);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.prep > p{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--rose-800);
+    font-family: var(--fs-outfit);
+}
+.prep > ul {
+   position: relative;
+   left: 1rem;
+  
+}
+.prep > ul > li{
+    padding-left: 3rem;
+    padding-top: .6rem;
+    font-family: var(--fs-outfit);
+    font-size: .9rem;
+    color: var(--stone-600);
+}
+.prep > ul > li::marker{
+    color: var(--rose-800)
+}
+
+.ingredientsAndInstructions {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+}
+.ingredientsAndInstructions > ul{
+    padding-left: 1.2rem;
+}
+.ingredientsAndInstructions > ul > li {
+    margin-top: .6rem;
+    padding-left: 2rem;
+    padding-top: .4rem;
+    font-family: var(--fs-outfit);
+    font-size: .9rem;
+    color: var(--stone-600);
+}
+.ingredientsAndInstructions > ul > li::marker {
+    color: var(--brown);
+}
+
+.lane{
+    width: 100%;
+    height: 1px;
+    background-color: var(--stone-150);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ingredientsAndInstructions.instructions > ol{
+    padding-left: 1.2rem;
+}
+.ingredientsAndInstructions.instructions > ol > li{
+    padding-left: 1.5rem;
+    padding-top: 1.2rem;
+    font-family: var(--fs-outfit);
+    font-size: .9rem;
+    color: var(--stone-600);
+    font-weight: 400;
+}
+.ingredientsAndInstructions.instructions > ol > li::marker{
+    font-weight: 600;
+    color: var(--brown);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+table td{
+    padding: 0.6rem;
+    text-align: left;
+    font-family: var(--fs-outfit);
+}
+td:nth-child(odd){
+    font-size: 1rem;
+    color: var(--stone-600);
+    padding-left: 2rem;
+}
+td:nth-child(even){
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--brown);
+    padding-left: 2rem;
+}
+tr{
+  border-bottom:1px solid var(--stone-150);
+}
+tr:last-child, tr:first-child {
+  border-bottom:0px solid var(--stone-150);
 }
